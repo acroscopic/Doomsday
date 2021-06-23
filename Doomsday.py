@@ -4,8 +4,8 @@ import calendar
 import os
 
 #Creating the high score file if it does not already exist
-filename = (score.txt)
-if no os.path.exists(filename):
+filename = ("score.txt")
+if not os.path.exists(filename):
     open(filename, 'w').close()
 
 os.system('cls||clear')

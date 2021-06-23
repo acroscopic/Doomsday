@@ -52,7 +52,6 @@ while(True):
 
     if int(attempt) == weekday:
         print("Success!")
-        print('\n')
 
 #keeping track of a high score
 

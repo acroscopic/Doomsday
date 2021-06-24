@@ -48,8 +48,14 @@ while(True):
     weekday = (calendar.weekday(year, month, day) + 1)
     print(str(month) + "/" +  str(day) + "/" + str(year))
     attempt = input("Calculate the day of the week of this date:")
-
-
+    # 0 = Sunday
+    # 1 = Monday
+    # 2 = Tuesday
+    # 3 = Wednesday
+    # 4 = Thursday
+    # 5 = Friday
+    # 6 = Saturday
+    
     if int(attempt) == weekday:
         print("Success!")
 

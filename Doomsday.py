@@ -4,9 +4,11 @@ import calendar
 import os
 
 #Creating the high score file if it does not already exist
-filename = ("score.txt")
+filename = ('score.db')
 if not os.path.exists(filename):
-    open(filename, 'w').close()
+    s = shelve.open()
+    s['score'] = 0
+    s.close()
 
 os.system('cls||clear')
 count = 0
@@ -55,7 +57,7 @@ while(True):
     # 4 = Thursday
     # 5 = Friday
     # 6 = Saturday
-    
+
     if int(attempt) == weekday:
         print("Success!")
 
@@ -69,7 +71,7 @@ while(True):
 count = count - 1
 
 
-s = shelve.open('score.txt')
+s = shelve.open(filename)
 current = s['score']
 
 
